@@ -415,18 +415,18 @@ A policy may permit an autonomous U1 update while requiring human ratification f
 For a candidate update $u$, the baseline authorisation decision can be represented as:
 
 $$
-\operatorname{Allow}(u) \;=\; D(u) \land C(u) \land M(u) \land A(u) \land E(u) \land R(u) \land V(u)
+\text{Allow}(u) = D(u) \land C(u) \land M(u) \land A(u) \land E(u) \land R(u) \land V(u)
 $$
 
 Where:
 
-* $D(u)$ — the domain is authorised;
-* $C(u)$ — the operational context is valid;
-* $M(u)$ — the target component is mutable;
-* $A(u)$ — the contributor or process has sufficient authority;
-* $E(u)$ — the evidence threshold is satisfied;
-* $R(u)$ — the assessed risk is acceptable;
-* $V(u)$ — validation and regression requirements have passed.
+- **\(D(u)\)** — il dominio è autorizzato  
+- **\(C(u)\)** — il contesto operativo è valido  
+- **\(M(u)\)** — il componente bersaglio è mutabile  
+- **\(A(u)\)** — autorità del proponente sufficiente  
+- **\(E(u)\)** — soglia di evidenze soddisfatta  
+- **\(R(u)\)** — rischio accettabile  
+- **\(V(u)\)** — convalida e regressioni superate
 
 The normative specification may define boolean gates, weighted evaluations or hybrid models.
 
