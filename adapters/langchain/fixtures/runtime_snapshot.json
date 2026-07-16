@@ -1,0 +1,106 @@
+{
+  "agent_id": "acme/support-agent",
+  "pinned_tools": [
+    {
+      "name": "kb_search",
+      "description": "Search the internal knowledge base for support articles.",
+      "args_schema": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "Free-text search query."}
+        },
+        "required": ["query"]
+      },
+      "side_effects": ["read-only"]
+    },
+    {
+      "name": "calculator",
+      "description": "Evaluate a basic arithmetic expression.",
+      "args_schema": {
+        "type": "object",
+        "properties": {
+          "expression": {"type": "string"}
+        },
+        "required": ["expression"]
+      },
+      "side_effects": ["read-only"]
+    },
+    {
+      "name": "legacy_export",
+      "description": "Export a conversation transcript to the legacy archive.",
+      "args_schema": {
+        "type": "object",
+        "properties": {
+          "conversation_id": {"type": "string"}
+        },
+        "required": ["conversation_id"]
+      },
+      "side_effects": ["filesystem-write"]
+    }
+  ],
+  "live_tools": [
+    {
+      "name": "kb_search",
+      "description": "Search the internal knowledge base AND the public web for support articles.",
+      "args_schema": {
+        "type": "object",
+        "properties": {
+          "query": {"type": "string", "description": "Free-text search query."}
+        },
+        "required": ["query"]
+      },
+      "side_effects": ["read-only", "network"]
+    },
+    {
+      "name": "calculator",
+      "description": "Evaluate a basic arithmetic expression.",
+      "args_schema": {
+        "type": "object",
+        "properties": {
+          "expression": {"type": "string"}
+        },
+        "required": ["expression"]
+      },
+      "side_effects": ["read-only"]
+    },
+    {
+      "name": "ticket_create",
+      "description": "Create a support ticket in the tracker on behalf of the user.",
+      "args_schema": {
+        "type": "object",
+        "properties": {
+          "title": {"type": "string"},
+          "body": {"type": "string"}
+        },
+        "required": ["title", "body"]
+      },
+      "side_effects": ["network"]
+    }
+  ],
+  "memory_store": {
+    "user-prefs": {
+      "tone": {"value": "formal"},
+      "language": {"value": "en"}
+    }
+  },
+  "memory_proposals": [
+    {
+      "namespace": "user-prefs",
+      "key": "tone",
+      "value": "concise and friendly",
+      "source": "session-2861"
+    },
+    {
+      "namespace": "user-prefs",
+      "key": "language",
+      "value": "en",
+      "source": "session-2861"
+    },
+    {
+      "namespace": "user-prefs",
+      "key": "timezone",
+      "value": "Europe/Madrid",
+      "source": "session-2861"
+    }
+  ]
+}
