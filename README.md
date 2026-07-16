@@ -1,4 +1,4 @@
-<!-- sai-aut-os:authored — informative; supersedes the stub seeded by tools/scaffold.py v0.2.0. Where this text and spec/ diverge, spec/ wins. -->
+<!-- sai-aut-os:authored — root README; supersedes the identity seed from tools/scaffold.py v0.2.0. Where this text and spec/ diverge, spec/ wins. -->
 
 # SAI-AUT-OS
 
@@ -8,8 +8,8 @@
 
 [![Status](https://img.shields.io/badge/status-pre--alpha-orange)](#project-status)
 [![Specification](https://img.shields.io/badge/specification--first-blue)](#specification-first)
-[![License](https://img.shields.io/badge/code-Apache--2.0-green)](../LICENSE)
-[![Documentation](https://img.shields.io/badge/specification-CC--BY--4.0-green)](../LICENSE)
+[![License](https://img.shields.io/badge/code-Apache--2.0-green)](LICENSE)
+[![Documentation](https://img.shields.io/badge/specification-CC--BY--4.0-green)](LICENSE)
 
 ---
 
@@ -60,6 +60,8 @@ In the same way, SAI-AUT-OS does not exist to prevent AI systems from changing.
 It exists to make autonomous evolution trustworthy.
 
 > **Artificial Intelligence should not evolve because it can. It should evolve because its evolution is governed, traceable, reversible and configuration-controlled.**
+
+The standalone declaration is authored in [`docs/manifesto.md`](docs/manifesto.md).
 
 ---
 
@@ -710,7 +712,7 @@ SAI-AUT-OS/
 ├── adapters/                        # Ecosystem integrations
 ├── telemetry/                       # Evidence collectors, exporters, OTel bridge
 ├── examples/                        # End-to-end use cases
-├── docs/                            # Explanatory documentation (this manifesto)
+├── docs/                            # Explanatory documentation and the public manifesto
 ├── tools/                           # Deterministic scaffolding and validation
 └── .github/workflows/               # CI, including the structural conformance gate
 ```
@@ -854,7 +856,7 @@ Contributions should distinguish clearly between:
 * experimental research;
 * ecosystem integrations.
 
-See [`CONTRIBUTING.md`](../CONTRIBUTING.md) and [`GOVERNANCE.md`](../GOVERNANCE.md).
+See [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`GOVERNANCE.md`](GOVERNANCE.md).
 
 ---
 
