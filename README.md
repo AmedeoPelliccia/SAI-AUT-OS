@@ -1,5 +1,8 @@
 <!-- sai-aut-os:authored — root README; supersedes the identity seed from tools/scaffold.py v0.2.0. Where this text and spec/ diverge, spec/ wins. -->
 
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/d63e14e3-fd4a-43b0-b450-f4bfbd624c4e" />
+
+
 # SAI-AUT-OS
 
 **Selective AI for Autonomous Upgrade and Tuning**
