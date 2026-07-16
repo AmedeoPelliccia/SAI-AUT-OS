@@ -1,0 +1,6 @@
+# sai-aut-os:seed scaffold=0.2.0 spec=1.0.0-draft.1
+# LF everywhere: byte-determinism of the seed set depends on it.
+* text eol=lf
+*.png binary
+*.jpg binary
+*.pdf binary

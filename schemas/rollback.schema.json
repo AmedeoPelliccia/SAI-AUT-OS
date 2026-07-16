@@ -1,0 +1,39 @@
+{
+  "$id": "urn:sai-aut-os:schema:rollback:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "The exercised guarantee of reversibility (SAO-RBK-001). Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "cci_id": {
+      "type": "string"
+    },
+    "deployment_ref": {
+      "type": "string"
+    },
+    "reason": {
+      "type": "string"
+    },
+    "rollback_target": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "requested",
+        "executed",
+        "verified",
+        "failed"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "cci_id",
+    "deployment_ref",
+    "rollback_target",
+    "status"
+  ],
+  "title": "Rollback Record",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

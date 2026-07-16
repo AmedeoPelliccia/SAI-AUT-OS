@@ -1,0 +1,34 @@
+{
+  "$id": "urn:sai-aut-os:schema:runtime-context:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "The declared shape of a governed system: what is immutable, what may evolve. Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "adaptive_components": {
+      "description": "Instances typed per registry/adaptive-components/.",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "environment": {
+      "type": "object"
+    },
+    "foundation_core": {
+      "description": "Identity + hash of the immutable core (SAO-COR-001).",
+      "type": "object"
+    },
+    "system_id": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "system_id",
+    "foundation_core",
+    "adaptive_components"
+  ],
+  "title": "Runtime Context",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

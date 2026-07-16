@@ -1,0 +1,45 @@
+{
+  "$id": "urn:sai-aut-os:schema:authorization:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "The accountable decision on a CCI (SAO-AUT-001). Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "authority": {
+      "description": "Accountable authority identity and level.",
+      "type": "object"
+    },
+    "cci_id": {
+      "type": "string"
+    },
+    "decision": {
+      "enum": [
+        "allow",
+        "deny",
+        "escalate"
+      ],
+      "type": "string"
+    },
+    "evidence_refs": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "policy_id": {
+      "type": "string"
+    },
+    "rationale": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "cci_id",
+    "policy_id",
+    "decision",
+    "authority"
+  ],
+  "title": "Authorization Record",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

@@ -1,0 +1,42 @@
+{
+  "$id": "urn:sai-aut-os:schema:deployment-record:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "Emitted before a CCI is considered live (SAO-DEP-001). Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "authorization_ref": {
+      "type": "string"
+    },
+    "cci_id": {
+      "type": "string"
+    },
+    "deployed_version": {
+      "type": "string"
+    },
+    "ledger_ref": {
+      "type": "string"
+    },
+    "previous_version": {
+      "type": "string"
+    },
+    "status": {
+      "enum": [
+        "pending",
+        "live",
+        "superseded",
+        "rolled_back"
+      ],
+      "type": "string"
+    }
+  },
+  "required": [
+    "cci_id",
+    "authorization_ref",
+    "deployed_version",
+    "status"
+  ],
+  "title": "Deployment Record",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

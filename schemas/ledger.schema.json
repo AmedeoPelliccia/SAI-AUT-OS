@@ -1,0 +1,44 @@
+{
+  "$id": "urn:sai-aut-os:schema:ledger:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "One link of the append-only, hash-chained trace (SAO-LGR-001). Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "payload_ref": {
+      "type": "string"
+    },
+    "prev_hash": {
+      "description": "record_hash of the previous entry; genesis uses 64 zeros.",
+      "type": "string"
+    },
+    "record_hash": {
+      "description": "SHA-256 of the canonicalized record.",
+      "type": "string"
+    },
+    "record_type": {
+      "enum": [
+        "evidence",
+        "authorization",
+        "deployment",
+        "rollback",
+        "cci",
+        "policy"
+      ],
+      "type": "string"
+    },
+    "seq": {
+      "minimum": 0,
+      "type": "integer"
+    }
+  },
+  "required": [
+    "seq",
+    "record_type",
+    "record_hash",
+    "prev_hash"
+  ],
+  "title": "Ledger Entry",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

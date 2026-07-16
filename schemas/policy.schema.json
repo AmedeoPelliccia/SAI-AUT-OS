@@ -1,0 +1,43 @@
+{
+  "$id": "urn:sai-aut-os:schema:policy:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "A declarative, versioned governance document. Evaluation is deterministic (SAO-POL-001). Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "applies_to": {
+      "description": "Update class IDs this policy governs.",
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "authority_level_required": {
+      "description": "Minimum authority level ID from registry/authority-levels/.",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "rules": {
+      "description": "Ordered declarative rules (grammar per spec/policy-language.md).",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "version": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "version",
+    "applies_to",
+    "rules",
+    "authority_level_required"
+  ],
+  "title": "Policy",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

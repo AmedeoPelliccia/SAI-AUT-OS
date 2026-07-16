@@ -1,0 +1,40 @@
+{
+  "$id": "urn:sai-aut-os:schema:evidence:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "A verifiable, hash-bound record supporting or opposing a CCI (SAO-EVD-001). Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "collected_by": {
+      "description": "Collector identity (human, pipeline, or model \u2014 models may collect, never ratify).",
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "payload_hash": {
+      "description": "SHA-256 of the raw payload; makes the record tamper-evident.",
+      "type": "string"
+    },
+    "source": {
+      "description": "System, dataset, or actor the evidence came from.",
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "type": {
+      "description": "Evidence type ID from registry/evidence-types/.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "source",
+    "payload_hash"
+  ],
+  "title": "Evidence Record",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}

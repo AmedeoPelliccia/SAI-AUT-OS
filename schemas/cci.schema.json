@@ -1,0 +1,74 @@
+{
+  "$id": "urn:sai-aut-os:schema:cci:1.0.0-draft.1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": true,
+  "description": "The governed unit of AI evolution. Nothing evolves without context, traceability, and accountability. Seed stub \u2014 normative fields pending ratification.",
+  "properties": {
+    "authorization": {
+      "description": "Authorization record (authorization.schema.json).",
+      "type": "object"
+    },
+    "class": {
+      "description": "Update class ID from registry/update-types/.",
+      "type": "string"
+    },
+    "deployment_history": {
+      "description": "Deployment records, newest last.",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "effectivity": {
+      "description": "Where and when the CCI applies.",
+      "type": "object"
+    },
+    "evidence": {
+      "description": "Evidence records (evidence.schema.json).",
+      "items": {
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "id": {
+      "description": "Globally unique CCI identifier.",
+      "type": "string"
+    },
+    "provenance": {
+      "description": "Who/what proposed this update, and from which signals.",
+      "type": "object"
+    },
+    "rollback_target": {
+      "description": "Exact prior configuration to revert to (SAO-RBK-001).",
+      "type": "string"
+    },
+    "scope": {
+      "description": "Adaptive components and systems this CCI touches.",
+      "type": "object"
+    },
+    "supersedes": {
+      "description": "Predecessor CCI id/version, if any (SAO-CCI-002).",
+      "type": "string"
+    },
+    "validation": {
+      "description": "Evaluation and validation results.",
+      "type": "object"
+    },
+    "version": {
+      "description": "Semver of this CCI.",
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "class",
+    "version",
+    "provenance",
+    "evidence",
+    "rollback_target"
+  ],
+  "title": "Cognitive Configuration Item",
+  "type": "object",
+  "x-sao-spec": "1.0.0-draft.1",
+  "x-sao-status": "seed"
+}
